@@ -10,6 +10,10 @@ if exists("b:af_rst_loaded")
     finish
 endif
 
+if !exists('g:_riv_s')
+  call riv#load_conf()
+endif
+
 let b:af_rst_loaded = 1
 
 let s:cpo_save = &cpo
