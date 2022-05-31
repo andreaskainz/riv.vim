@@ -15,7 +15,7 @@ let b:af_py_loaded = 1
 let s:cpo_save = &cpo
 set cpo-=C
 
-if g:riv_python_rst_hl == 1 
+if exists("g:riv_python_rst_hl") && g:riv_python_rst_hl == 1
     " Store the current syntax because python-mode set's it's syntax to pymode and
     " not python
     if exists('b:current_syntax')
